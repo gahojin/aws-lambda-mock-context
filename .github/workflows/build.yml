@@ -63,11 +63,8 @@ jobs:
         run: pnpm run lint
       - name: Run Typescript check
         run: pnpm run check
-      - name: Get number of CPU cores
-        id: cpu-cores
-        uses: SimenB/github-actions-cpu-cores@v2
       - name: Run Unit tests
-        run: pnpm run test --concurrency ${{ steps.cpu-cores.outputs.count }}
+        run: pnpm run test:unit
       - name: Commit changes
         if: ${{ github.event_name == 'pull_request' }}
         uses: stefanzweifel/git-auto-commit-action@v5
