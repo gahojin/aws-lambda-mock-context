@@ -21,9 +21,6 @@ importers:
       '@commitlint/config-conventional':
         specifier: 19.5.0
         version: 19.5.0
-      '@fast-check/vitest':
-        specifier: 0.1.3
-        version: 0.1.3(vitest@2.1.2(@types/node@20.16.11))
       '@types/aws-lambda':
         specifier: 8.10.145
         version: 8.10.145
@@ -499,11 +496,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fast-check/vitest@0.1.3':
-    resolution: {integrity: sha512-mdLtUVdR/dmmSifzFsY/69Bz+EQDxzdUIDrTfLVfRyebgzVGoA7iuHPwQIN438naHwcm7XyDz05MCA3Tl8v56w==}
-    peerDependencies:
-      vitest: '>=0.28.1 <1.0.0 || ^1 || ^2'
-
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
@@ -902,10 +894,6 @@ packages:
   execa@5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
     engines: {node: '>=10'}
-
-  fast-check@3.22.0:
-    resolution: {integrity: sha512-8HKz3qXqnHYp/VCNn2qfjHdAdcI8zcSqOyX64GOMukp7SL2bfzfeDKjSd+UyECtejccaZv3LcvZTm9YDD22iCQ==}
-    engines: {node: '>=8.0.0'}
 
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -1314,9 +1302,6 @@ packages:
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
-
-  pure-rand@6.1.0:
-    resolution: {integrity: sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==}
 
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
@@ -1958,11 +1943,6 @@ snapshots:
   '@esbuild/win32-x64@0.23.1':
     optional: true
 
-  '@fast-check/vitest@0.1.3(vitest@2.1.2(@types/node@20.16.11))':
-    dependencies:
-      fast-check: 3.22.0
-      vitest: 2.1.2(@types/node@20.16.11)
-
   '@isaacs/cliui@8.0.2':
     dependencies:
       string-width: 5.1.2
@@ -2380,10 +2360,6 @@ snapshots:
       signal-exit: 3.0.7
       strip-final-newline: 2.0.0
 
-  fast-check@3.22.0:
-    dependencies:
-      pure-rand: 6.1.0
-
   fast-deep-equal@3.1.3: {}
 
   fast-uri@3.0.2: {}
@@ -2713,8 +2689,6 @@ snapshots:
       react-is: 18.3.1
 
   punycode@2.3.1: {}
-
-  pure-rand@6.1.0: {}
 
   react-is@18.3.1: {}
 
