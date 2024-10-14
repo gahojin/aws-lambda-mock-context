@@ -110,6 +110,6 @@ describe('mockContext', () => {
   })
 
   test('timeout throws error', () => {
-    expect(invokeAsync('succeed', 'foo', { ms: 2000, timeout: 1 })).rejects.toThrow('Task timed out after 1.00 seconds')
+    expect(invokeAsync('succeed', 'foo', { ms: 3000, timeout: 1 })).rejects.toThrow('Task timed out after 1.00 seconds')
   })
 })
