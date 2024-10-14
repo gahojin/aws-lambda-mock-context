@@ -37,6 +37,14 @@ const defer = (): Deferred => {
   }
 }
 
+const lambdaTimeout = (context: MockContext, timeout: number): NodeJS.Timeout => {
+  return setTimeout(() => {
+    if (Math.round(context.getRemainingTimeInMillis() / 1000) === 0) {
+      context.fail(new Error(`Task timed out after ${timeout}.00 seconds`))
+    }
+  }, timeout * 1000)
+}
+
 const context = (options?: Options): MockContext => {
   const id = uuidv1()
   const stream = uuidv4().replace(/-/g, '')
@@ -104,11 +112,7 @@ const context = (options?: Options): MockContext => {
 
   // Lambda Timeout
   if (opts.timeout > 0) {
-    timeout = setTimeout(() => {
-      if (context.getRemainingTimeInMillis() === 0) {
-        context.fail(new Error(`Task timed out after ${opts.timeout}.00 seconds`))
-      }
-    }, opts.timeout * 1000)
+    timeout = lambdaTimeout(context, opts.timeout)
   }
 
   return context
