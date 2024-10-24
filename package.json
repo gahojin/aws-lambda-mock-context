@@ -61,7 +61,7 @@
   "peerDependencies": {
     "uuid": ">=8.0.0"
   },
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.12.2",
   "engines": {
     "node": ">=18.x",
     "npm": "use pnpm",
