@@ -5,12 +5,13 @@
   "author": "GAHOJIN, Inc.",
   "license": "Apache-2.0",
   "type": "module",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/gahojin/aws-lambda-mock-context.git"
   },
   "files": ["dist"],
-  "keywords": [],
+  "keywords": ["aws", "lambda", "mock"],
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -61,7 +62,7 @@
   "peerDependencies": {
     "uuid": ">=8.0.0"
   },
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.12.2",
   "engines": {
     "node": ">=18.x",
     "npm": "use pnpm",
