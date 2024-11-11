@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       uuid:
-        specifier: 11.0.2
-        version: 11.0.2
+        specifier: 11.0.3
+        version: 11.0.3
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -52,8 +52,8 @@ importers:
         specifier: 5.6.3
         version: 5.6.3
       vite-tsconfig-paths:
-        specifier: 5.1.0
-        version: 5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
+        specifier: 5.1.2
+        version: 5.1.2(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6))
       vitest:
         specifier: 2.1.4
         version: 2.1.4(@types/node@20.17.6)
@@ -1402,8 +1402,8 @@ packages:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
     engines: {node: '>=18'}
 
-  uuid@11.0.2:
-    resolution: {integrity: sha512-14FfcOJmqdjbBPdDjFQyk/SdT4NySW4eM0zcG+HqbHP5jzuH56xO3J1DGhgs/cEMCfwYi3HQI1gnTO62iaG+tQ==}
+  uuid@11.0.3:
+    resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
     hasBin: true
 
   vite-node@2.1.4:
@@ -1411,8 +1411,8 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
-  vite-tsconfig-paths@5.1.0:
-    resolution: {integrity: sha512-Y1PLGHCJfAq1Zf4YIGEsmuU/NCX1epoZx9zwSr32Gjn3aalwQHRKr5aUmbo6r0JHeHkqmWpmDg7WOynhYXw1og==}
+  vite-tsconfig-paths@5.1.2:
+    resolution: {integrity: sha512-gEIbKfJzSEv0yR3XS2QEocKetONoWkbROj6hGx0FHM18qKUojhvcokQsxQx5nMkelZq2n37zbSGCJn+FSODSjA==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
@@ -2668,7 +2668,7 @@ snapshots:
 
   unicorn-magic@0.1.0: {}
 
-  uuid@11.0.2: {}
+  uuid@11.0.3: {}
 
   vite-node@2.1.4(@types/node@20.17.6):
     dependencies:
@@ -2687,7 +2687,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@5.1.0(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6)):
+  vite-tsconfig-paths@5.1.2(typescript@5.6.3)(vite@5.4.10(@types/node@20.17.6)):
     dependencies:
       debug: 4.3.7
       globrex: 0.1.2
