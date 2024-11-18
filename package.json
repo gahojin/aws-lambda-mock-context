@@ -50,7 +50,7 @@
     "@types/node": "20.17.6",
     "@types/uuid": "10.0.0",
     "@vitest/coverage-v8": "2.1.5",
-    "husky": "9.1.6",
+    "husky": "9.1.7",
     "jest-extended": "4.0.2",
     "npm-check-updates": "17.1.11",
     "rimraf": "6.0.1",
