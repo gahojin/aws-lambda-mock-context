@@ -112,4 +112,26 @@ describe('mockContext', () => {
   test('timeout throws error', async () => {
     await expect(invokeAsync('succeed', 'foo', { ms: 2000, timeout: 1 })).rejects.toThrow('Task timed out after 1.00 seconds')
   })
+
+  test('extended context', () => {
+    const ctx = context(
+      {
+        region: 'eu-west-1',
+        account: '210987654321',
+        functionName: 'test',
+        functionVersion: '1',
+        memoryLimitInMB: '512',
+        alias: 'production',
+      },
+      {
+        foo: 'bar',
+        a: {
+          b: 'c',
+        },
+      },
+    )
+
+    expect(ctx.foo).toEqual('bar')
+    expect(ctx.a).toEqual({ b: 'c' })
+  })
 })
