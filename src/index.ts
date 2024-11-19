@@ -45,7 +45,7 @@ const lambdaTimeout = (context: MockContext, timeout: number): NodeJS.Timeout =>
   }, timeout * 1000)
 }
 
-const context = (options?: Options): MockContext => {
+const context = <E = Record<string, any>>(options?: Options, overrides?: E): MockContext & E => {
   const id = uuidv1()
   const stream = uuidv4().replace(/-/g, '')
 
@@ -115,7 +115,7 @@ const context = (options?: Options): MockContext => {
     timeout = lambdaTimeout(context, opts.timeout)
   }
 
-  return context
+  return Object.assign(context, overrides)
 }
 
 export default context
