@@ -33,15 +33,15 @@ const invokeAsync = (method: Method, result: string | Error | [Error | undefined
 }
 
 describe('mockContext', () => {
-  test('succeed', () => {
-    expect(invokeAsync('succeed', 'baz')).resolves.toEqual('baz')
-    expect(invokeAsync('done', [undefined, 'baz'])).resolves.toEqual('baz')
+  test('succeed', async () => {
+    await expect(invokeAsync('succeed', 'baz')).resolves.toEqual('baz')
+    await expect(invokeAsync('done', [undefined, 'baz'])).resolves.toEqual('baz')
   })
 
-  test('fail', () => {
-    expect(invokeAsync('fail', 'promise fail')).rejects.toThrow('promise fail')
-    expect(invokeAsync('fail', new Error('promise fail'))).rejects.toThrow('promise fail')
-    expect(invokeAsync('done', new Error('promise fail'))).rejects.toThrow('promise fail')
+  test('fail', async () => {
+    await expect(invokeAsync('fail', 'promise fail')).rejects.toThrow('promise fail')
+    await expect(invokeAsync('fail', new Error('promise fail'))).rejects.toThrow('promise fail')
+    await expect(invokeAsync('done', new Error('promise fail'))).rejects.toThrow('promise fail')
   })
 
   test('result', () => {
@@ -109,7 +109,7 @@ describe('mockContext', () => {
     ctx.succeed('result')
   })
 
-  test('timeout throws error', () => {
-    expect(invokeAsync('succeed', 'foo', { ms: 2000, timeout: 1 })).rejects.toThrow('Task timed out after 1.00 seconds')
+  test('timeout throws error', async () => {
+    await expect(invokeAsync('succeed', 'foo', { ms: 2000, timeout: 1 })).rejects.toThrow('Task timed out after 1.00 seconds')
   })
 })
