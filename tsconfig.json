@@ -5,7 +5,7 @@
     "outDir": "dist",
     "target": "ES2022",
     "module": "ES2022",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
     "lib": ["ES2023"],
     "declaration": true,
     "sourceMap": true,
