@@ -45,7 +45,7 @@
     }
   },
   "dependencies": {
-    "uuid": "11.0.4"
+    "uuid": "11.0.5"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.17.2",
