@@ -5,12 +5,21 @@
 
 AWS Lambda mock context object
 
+## Installation
 
-## 参考
+```shell
+$ npm install --save-dev @gahojin-inc/aws-lambda-mock-context
+```
 
-- https://github.com/SamVerschueren/aws-lambda-mock-context
+## Usage
 
-## ライセンス
+```typescript
+import mockContext from '@gahojin-inc/aws-lambda-mock-context'
+
+await index.handler({hello: 'world'}, mockContext())
+```
+
+## License
 
 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
@@ -30,8 +39,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
-### オリジナルコード
+### Original Code
 
-```
-MIT © Sam Verschueren
-```
+Special Thanks.
+
+https://github.com/SamVerschueren/aws-lambda-mock-context
