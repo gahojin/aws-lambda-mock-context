@@ -55,7 +55,7 @@
     "@types/aws-lambda": "8.10.147",
     "@types/node": "20.17.14",
     "@types/uuid": "10.0.0",
-    "@vitest/coverage-v8": "3.0.2",
+    "@vitest/coverage-v8": "3.0.3",
     "husky": "9.1.7",
     "jest-extended": "4.0.2",
     "npm-check-updates": "17.1.14",
@@ -63,7 +63,7 @@
     "tsup": "8.3.5",
     "typescript": "5.7.3",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "3.0.2"
+    "vitest": "3.0.3"
   },
   "peerDependencies": {
     "uuid": ">=8.0.0"
