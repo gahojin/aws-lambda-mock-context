@@ -1,8 +1,9 @@
-import context from '.'
+import context, { resetGlobalOptions, setGlobalOptions } from '.'
 
 type InvokeAsyncOptions = {
   ms?: number
   timeout?: number
+  handleTimeout?: boolean
 }
 
 type Method = 'succeed' | 'fail' | 'done'
@@ -18,6 +19,7 @@ const invokeAsync = (method: Method, result: string | Error | [Error | undefined
 
   const ctx = context({
     timeout: opts.timeout,
+    handleTimeout: opts.handleTimeout,
   })
 
   setTimeout(() => {
@@ -33,6 +35,10 @@ const invokeAsync = (method: Method, result: string | Error | [Error | undefined
 }
 
 describe('mockContext', () => {
+  beforeEach(() => {
+    resetGlobalOptions()
+  })
+
   test('succeed', async () => {
     await expect(invokeAsync('succeed', 'baz')).resolves.toEqual('baz')
     await expect(invokeAsync('done', [undefined, 'baz'])).resolves.toEqual('baz')
@@ -110,7 +116,7 @@ describe('mockContext', () => {
   })
 
   test('timeout throws error', async () => {
-    await expect(invokeAsync('succeed', 'foo', { ms: 2000, timeout: 1 })).rejects.toThrow('Task timed out after 1.00 seconds')
+    await expect(invokeAsync('succeed', 'foo', { ms: 2000, timeout: 1, handleTimeout: true })).rejects.toThrow('Task timed out after 1.00 seconds')
   })
 
   test('extended context', () => {
@@ -134,4 +140,18 @@ describe('mockContext', () => {
     expect(ctx.foo).toEqual('bar')
     expect(ctx.a).toEqual({ b: 'c' })
   })
+
+  test('global options', async () => {
+    setGlobalOptions({ timeout: 10, handleTimeout: true })
+    const ctx = context()
+
+    await delay(1000)
+
+    expect(ctx.getRemainingTimeInMillis()).toBeWithin(8950, 9050)
+
+    await expect(invokeAsync('succeed', 'foo', { ms: 2000, timeout: 1 })).rejects.toThrow('Task timed out after 1.00 seconds')
+
+    // no timeout error
+    await expect(invokeAsync('succeed', 'foo', { ms: 2000, timeout: 1, handleTimeout: false })).resolves.toEqual('foo')
+  }, 10000)
 })

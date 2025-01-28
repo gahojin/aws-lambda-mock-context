@@ -11,6 +11,7 @@ type Options = {
   identity?: CognitoIdentity
   clientContext?: ClientContext
   timeout?: number
+  handleTimeout?: boolean
 }
 
 interface MockContext extends Context {
@@ -22,6 +23,7 @@ type Deferred = {
   resolve: (value: unknown) => void
   reject: (reason?: any) => void
 }
+
 const defer = (): Deferred => {
   const deferred: Partial<Deferred> = {}
   const promise = new Promise((resolve, reject) => {
@@ -45,19 +47,46 @@ const lambdaTimeout = (context: MockContext, timeout: number): NodeJS.Timeout =>
   }, timeout * 1000)
 }
 
-export default <E = Record<string, any>>(options?: Options, overrides?: E): MockContext & E => {
+let globalOptions: Options = {}
+
+const setGlobalOptions = (options: Options): Options => {
+  Object.assign(globalOptions, options)
+  return globalOptions
+}
+
+const resetGlobalOptions = () => {
+  globalOptions = {}
+}
+
+const getStrictKeys = <T extends Record<string, any>>(object: T): (keyof T)[] => Object.keys(object)
+
+const removeUndefinedValues = (options?: Options): Options => {
+  if (!options) {
+    return {}
+  }
+  for (const key of getStrictKeys(options)) {
+    options[key] === undefined && delete options[key]
+  }
+  return options
+}
+
+const mockContext = <E = Record<string, any>>(options?: Options, overrides?: E): MockContext & E => {
   const id = uuidv1()
   const stream = uuidv4().replace(/-/g, '')
 
-  const opts = {
-    region: 'us-west-1',
-    account: '123456789012',
-    functionName: 'aws-lambda-mock-context',
-    functionVersion: '$LATEST',
-    memoryLimitInMB: '128',
-    timeout: 3,
-    ...options,
-  }
+  const opts = Object.assign(
+    {
+      region: 'us-west-1',
+      account: '123456789012',
+      functionName: 'aws-lambda-mock-context',
+      functionVersion: '$LATEST',
+      memoryLimitInMB: '128',
+      timeout: 3,
+      handleTimeout: false,
+    },
+    removeUndefinedValues(globalOptions),
+    removeUndefinedValues(options),
+  )
 
   const deferred = defer()
 
@@ -111,9 +140,12 @@ export default <E = Record<string, any>>(options?: Options, overrides?: E): Mock
   }
 
   // Lambda Timeout
-  if (opts.timeout > 0) {
+  if (opts.handleTimeout && opts.timeout > 0) {
     timeout = lambdaTimeout(context, opts.timeout)
   }
 
   return Object.assign(context, overrides)
 }
+
+export { setGlobalOptions, resetGlobalOptions }
+export default mockContext
