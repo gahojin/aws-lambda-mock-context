@@ -1,5 +1,5 @@
 import type { ClientContext, CognitoIdentity, Context } from 'aws-lambda'
-import { v1 as uuidv1, v4 as uuidv4 } from 'uuid'
+import { randomUUID } from 'node:crypto'
 
 type Options = {
   region?: string
@@ -71,8 +71,8 @@ const removeUndefinedValues = (options?: Options): Options => {
 }
 
 const mockContext = <E = Record<string, any>>(options?: Options, overrides?: E): MockContext & E => {
-  const id = uuidv1()
-  const stream = uuidv4().replace(/-/g, '')
+  const requestId = randomUUID()
+  const logStream = requestId.replace(/-/g, '')
 
   const opts = Object.assign(
     {
@@ -103,9 +103,9 @@ const mockContext = <E = Record<string, any>>(options?: Options, overrides?: E):
     functionVersion: opts.functionVersion,
     invokedFunctionArn: `arn:aws:lambda:${opts.region}:${opts.account}:function:${opts.functionName}:${opts.alias || opts.functionVersion}`,
     memoryLimitInMB: opts.memoryLimitInMB,
-    awsRequestId: id,
+    awsRequestId: requestId,
     logGroupName: `/aws/lambda/${opts.functionName}`,
-    logStreamName: `${logDate}/[${opts.functionVersion}]/${stream}`,
+    logStreamName: `${logDate}/[${opts.functionVersion}]/${logStream}`,
     identity: opts.identity,
     clientContext: opts.clientContext,
     getRemainingTimeInMillis: () => {
