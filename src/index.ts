@@ -1,5 +1,5 @@
-import type { ClientContext, CognitoIdentity, Context } from 'aws-lambda'
 import { randomUUID } from 'node:crypto'
+import type { ClientContext, CognitoIdentity, Context } from 'aws-lambda'
 
 type Options = {
   region?: string
