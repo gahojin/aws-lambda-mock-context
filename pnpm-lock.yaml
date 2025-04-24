@@ -42,8 +42,8 @@ importers:
         specifier: 4.0.2
         version: 4.0.2
       npm-check-updates:
-        specifier: 18.0.0
-        version: 18.0.0
+        specifier: 18.0.1
+        version: 18.0.1
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -1186,8 +1186,8 @@ packages:
     resolution: {integrity: sha512-Z3lTE9pLaJF47NyMhd4ww1yFTAP8YhYI8SleJiHzM46Fgpm5cnNzSl9XfzFNqbaz+VlJrIj3fXQ4DeN1Rjm6cw==}
     engines: {node: '>=18'}
 
-  npm-check-updates@18.0.0:
-    resolution: {integrity: sha512-ymh9KF/xcGypQuCr5NQw1pAMRh5mHnQQDgHwM8gQBG8siG9XAKvcP9OtoARxFRgOjzEfjD6YtU/7KB2jJqGGlQ==}
+  npm-check-updates@18.0.1:
+    resolution: {integrity: sha512-MO7mLp/8nm6kZNLLyPgz4gHmr9tLoU+pWPLdXuGAx+oZydBHkHWN0ibTonsrfwC2WEQNIQxuZagYwB67JQpAuw==}
     engines: {node: ^18.18.0 || >=20.0.0, npm: '>=8.12.1'}
     hasBin: true
 
@@ -2610,7 +2610,7 @@ snapshots:
       emojilib: 2.4.0
       skin-tone: 2.0.0
 
-  npm-check-updates@18.0.0: {}
+  npm-check-updates@18.0.1: {}
 
   object-assign@4.1.1: {}
 
