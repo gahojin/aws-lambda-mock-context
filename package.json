@@ -19,7 +19,8 @@
   "scripts": {
     "preinstall": "pnpm dlx only-allow pnpm",
     "clean": "rimraf dist",
-    "build": "tsup",
+    "prebuild": "rimraf dist",
+    "build": "rolldown -c",
     "prepublish": "pnpm run build",
     "lint": "biome check --write .",
     "check": "tsc",
@@ -28,18 +29,19 @@
     "test:unit": "vitest --passWithNoTests --run --coverage",
     "ncu": "npm-check-updates -u"
   },
-  "main": "dist/cjs/index.cjs",
+  "main": "dist/index.cjs",
   "module": "dist/index.mjs",
+  "types": "dist/index.d.cts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
+        "types": "./dist/index.d.mts",
         "default": "./dist/index.mjs"
       },
       "require": {
-        "types": "./dist/cjs/index.d.cts",
-        "default": "./dist/cjs/index.cjs"
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
       }
     }
   },
@@ -51,13 +53,13 @@
     "@types/aws-lambda": "8.10.149",
     "@types/node": "20.17.31",
     "@vitest/coverage-v8": "3.1.2",
-    "esbuild": "0.25.3",
     "jest-extended": "4.0.2",
-    "lefthook": "^1.11.11",
+    "lefthook": "1.11.11",
     "npm-check-updates": "18.0.1",
     "rimraf": "6.0.1",
-    "tsup": "8.4.0",
+    "rolldown": "1.0.0-beta.8",
     "typescript": "5.8.3",
+    "unplugin-isolated-decl": "0.13.10",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.1.2"
   },
