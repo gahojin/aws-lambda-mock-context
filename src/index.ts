@@ -54,7 +54,7 @@ const setGlobalOptions = (options: Options): Options => {
   return globalOptions
 }
 
-const resetGlobalOptions = () => {
+const resetGlobalOptions = (): void => {
   globalOptions = {}
 }
 
