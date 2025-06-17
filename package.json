@@ -10,8 +10,14 @@
     "type": "git",
     "url": "https://github.com/gahojin/aws-lambda-mock-context.git"
   },
-  "files": ["dist"],
-  "keywords": ["aws", "lambda", "mock"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "aws",
+    "lambda",
+    "mock"
+  ],
   "publishConfig": {
     "access": "public",
     "provenance": true
