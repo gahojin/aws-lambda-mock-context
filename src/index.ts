@@ -30,12 +30,12 @@ const defer = (): Deferred => {
     deferred.resolve = resolve
     deferred.reject = reject
   })
+  assert(deferred.resolve)
+  assert(deferred.reject)
   return {
     promise,
-    // biome-ignore lint/style/noNonNullAssertion: <explanation>
-    resolve: deferred.resolve!,
-    // biome-ignore lint/style/noNonNullAssertion: <explanation>
-    reject: deferred.reject!,
+    resolve: deferred.resolve,
+    reject: deferred.reject,
   }
 }
 
