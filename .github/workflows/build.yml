@@ -19,7 +19,7 @@ on:
       - "bumpver.toml"
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -38,6 +38,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
 
       - name: Install pnpm
         uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
@@ -71,9 +73,3 @@ jobs:
 
       - name: Run Unit tests
         run: pnpm run test:unit
-      - name: Commit changes
-        if: ${{ matrix.node-version == 22 && github.event_name == 'pull_request' }}
-        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5.2.0
-        with:
-          commit_options: "--no-verify --signoff"
-          commit_message: "ci: apply formatting changes"
