@@ -8,7 +8,7 @@
     "moduleResolution": "bundler",
     "lib": ["ES2023"],
     "declaration": true,
-    "isolatedDeclarations": true,
+    "isolatedDeclarations": false,
     "sourceMap": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -29,6 +29,5 @@
     "newLine": "lf",
     "types": ["@types/node", "vitest/globals", "jest-extended"]
   },
-  "include": ["src"],
   "exclude": ["dist", "node_modules"]
 }

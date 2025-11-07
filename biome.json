@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.2/schema.json",
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "vcs": {
     "enabled": true,
@@ -23,7 +23,6 @@
         "useImportExtensions": "off"
       },
       "nursery": {
-        "noSecrets": "off",
         "useExplicitType": "off"
       },
       "style": {
@@ -50,7 +49,9 @@
       "performance": {
         "noNamespaceImport": "off"
       },
-      "security": {}
+      "security": {
+        "noSecrets": "off"
+      }
     },
     "includes": ["**", "!**/jest-extended.d.ts"]
   },

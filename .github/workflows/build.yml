@@ -5,18 +5,22 @@ on:
     branches:
       - "main"
     paths-ignore:
-      - ".husky/**"
       - ".vscode/**"
       - "LICENSE"
       - "*.md"
       - "bumpver.toml"
+      - "commitlint.config.cjs"
+      - "lefthook.yaml"
+      - "mise.toml"
   pull_request:
     paths-ignore:
-      - ".husky/**"
       - ".vscode/**"
       - "LICENSE"
       - "*.md"
       - "bumpver.toml"
+      - "commitlint.config.cjs"
+      - "lefthook.yaml"
+      - "mise.toml"
 
 permissions:
   contents: read
@@ -77,7 +81,7 @@ jobs:
         run: pnpm run check:packagejson
 
       - name: Run Linter & Formatter
-        run: pnpm run lint
+        run: pnpm biome ci .
 
       - name: Run Typescript check
         run: pnpm run check
