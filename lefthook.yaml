@@ -4,8 +4,6 @@
 assert_lefthook_installed: true
 skip_lfs: true
 
-rc: '"${XDG_CONFIG_HOME:-$HOME/.config}/lefthookrc"'
-
 commit-msg:
   parallel: true
   commands:
