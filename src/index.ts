@@ -8,8 +8,9 @@ type Options = {
   functionName?: string
   functionVersion?: string
   memoryLimitInMB?: string
-  identity?: CognitoIdentity
-  clientContext?: ClientContext
+  identity?: CognitoIdentity | undefined
+  clientContext?: ClientContext | undefined
+  tenantId?: string | undefined
   timeout?: number
   handleTimeout?: boolean
 }
@@ -108,6 +109,7 @@ const mockContext = <E = Record<string, any>>(options?: Options, overrides?: E):
     logStreamName: `${logDate}/[${opts.functionVersion}]/${logStream}`,
     identity: opts.identity,
     clientContext: opts.clientContext,
+    tenantId: opts.tenantId,
     getRemainingTimeInMillis: () => {
       const endTime = end || Date.now()
       const remainingTime = opts.timeout * 1000 - (endTime - start)
