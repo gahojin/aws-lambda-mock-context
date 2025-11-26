@@ -1,6 +1,6 @@
 {
   "name": "@gahojin-inc/aws-lambda-mock-context",
-  "version": "2025.11.1",
+  "version": "2025.11.2",
   "description": "AWS Lambda mock context object",
   "author": "GAHOJIN, Inc.",
   "license": "Apache-2.0",
