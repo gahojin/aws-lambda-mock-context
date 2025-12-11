@@ -55,7 +55,7 @@
     "@commitlint/config-conventional": "20.0.0",
     "@types/aws-lambda": "8.10.159",
     "@types/node": "24.10.1",
-    "@typescript/native-preview": "7.0.0-dev.20251203.1",
+    "@typescript/native-preview": "7.0.0-dev.20251204.1",
     "@vitest/coverage-v8": "4.0.15",
     "jest-extended": "7.0.0",
     "lefthook": "2.0.7",
