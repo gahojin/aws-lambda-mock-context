@@ -27,8 +27,8 @@ importers:
         specifier: 24.10.3
         version: 24.10.3
       '@typescript/native-preview':
-        specifier: 7.0.0-dev.20251211.1
-        version: 7.0.0-dev.20251211.1
+        specifier: 7.0.0-dev.20251212.1
+        version: 7.0.0-dev.20251212.1
       '@vitest/coverage-v8':
         specifier: 4.0.15
         version: 4.0.15(vitest@4.0.15(@types/node@24.10.3)(jiti@2.6.1))
@@ -36,8 +36,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0(typescript@5.9.3)
       lefthook:
-        specifier: 2.0.9
-        version: 2.0.9
+        specifier: 2.0.11
+        version: 2.0.11
       npm-check-updates:
         specifier: 19.2.0
         version: 19.2.0
@@ -832,43 +832,43 @@ packages:
   '@types/node@24.10.3':
     resolution: {integrity: sha512-gqkrWUsS8hcm0r44yn7/xZeV1ERva/nLgrLxFRUGb7aoNMIJfZJ3AC261zDQuOAKC7MiXai1WCpYc48jAHoShQ==}
 
-  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20251211.1':
-    resolution: {integrity: sha512-0TSLj8s2M1eQXnQV0+DMFCnJF4vqNobTaeKzMpR8oHOsD2az93knOUixsZk0Nyf3jYzgszDakNXhp0K3fzWWAw==}
+  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20251212.1':
+    resolution: {integrity: sha512-5tof0OT01yPQ0mcoKPeSrGMxQ9Dl//gTjSKCMKwbLr5urrIPxX5bNRWUH0hxWaB4A3mXQvDvxSSrWR5TMOl2aQ==}
     cpu: [arm64]
     os: [darwin]
 
-  '@typescript/native-preview-darwin-x64@7.0.0-dev.20251211.1':
-    resolution: {integrity: sha512-Nv6+4H1SxjkbOLQZjbAjivTtFmPpeGiXKXh/8/UwkQW3Bom/L+owCfJNffsMKalKdDa/eYRW0uaoAk0dcU4c4A==}
+  '@typescript/native-preview-darwin-x64@7.0.0-dev.20251212.1':
+    resolution: {integrity: sha512-zUgcCXmDfO2yo5fNZZ3wUCv8hdqc/Qbc1WZUEDYYo3ItnBUL9qp0lUtTwsLtNreL2WmHOCeTQuKWa/JQzdw89g==}
     cpu: [x64]
     os: [darwin]
 
-  '@typescript/native-preview-linux-arm64@7.0.0-dev.20251211.1':
-    resolution: {integrity: sha512-sJapYFFiJnTeK/d2LmoQaTQKzMm8zquQAaAJaual+yu4sVKbP6sZRZ1GVS4FDISJvUrlajpLWxtfQTHR4dlgeQ==}
+  '@typescript/native-preview-linux-arm64@7.0.0-dev.20251212.1':
+    resolution: {integrity: sha512-0P59bGDFLppvkdpqQ8/kG+kU6R0iCdQiSLFRNrbrLnaflACBfIi40D3Ono3EmeSxqKsHqh/pNRu3BUJvoNGphw==}
     cpu: [arm64]
     os: [linux]
 
-  '@typescript/native-preview-linux-arm@7.0.0-dev.20251211.1':
-    resolution: {integrity: sha512-6Y6VqTMfgvt8f1P5FHNIT/O/L0lSw5MHOcVOnrZEfvOAUXE+cCmC5VvtFh1Paa1Zu+oTBnCu5EvIwemHl4V73A==}
+  '@typescript/native-preview-linux-arm@7.0.0-dev.20251212.1':
+    resolution: {integrity: sha512-peQCeG2+XqMqs6/Sg6nbQPI3Kae91Esi5Qh1VyDETO4wjMbKeAzVjw8t3Qz5X6RDbWNrCpDmbk6chjukfGeWgQ==}
     cpu: [arm]
     os: [linux]
 
-  '@typescript/native-preview-linux-x64@7.0.0-dev.20251211.1':
-    resolution: {integrity: sha512-bJfieFUeJRGsjByfeShQYXbFRbJ4k14/Sp1HQ2Eu8yOd+hUpOj7fsax7b5B2XvE4cSuC+dRV2FVOCZQNaL4u2Q==}
+  '@typescript/native-preview-linux-x64@7.0.0-dev.20251212.1':
+    resolution: {integrity: sha512-7QFyqcPe/Sz+IakvzCqh0d5WhQg7A7bKyQil38K7rKSTaPI42LrVwLA6mVtTRfQyS5Sy2XYVinyLNXnWM8ImQQ==}
     cpu: [x64]
     os: [linux]
 
-  '@typescript/native-preview-win32-arm64@7.0.0-dev.20251211.1':
-    resolution: {integrity: sha512-0vZ1NQmLyRf1bLaBjHFem1pLsJJnPMOCfScgM616cJpkbqqGEAgXfOnxKOUxiZ6X+hfx09gXn+5wq7zjaV0aag==}
+  '@typescript/native-preview-win32-arm64@7.0.0-dev.20251212.1':
+    resolution: {integrity: sha512-Y8mh0dPXAcYYNtSZVZYaNcqAOlxOlbJQopJBVATn+ItCxrY4RqBwygzrBWqg+gUo9xLmFI9XLuDVqm1ZAkAfwg==}
     cpu: [arm64]
     os: [win32]
 
-  '@typescript/native-preview-win32-x64@7.0.0-dev.20251211.1':
-    resolution: {integrity: sha512-OUB0nNmzZeCl0KjxeG7R+Ey1gq8iaVoJJRJpwKiTj6Ws5voKOb6PxNoM2jMNqJV3R/d3PXfR7Y39/IINioa/CQ==}
+  '@typescript/native-preview-win32-x64@7.0.0-dev.20251212.1':
+    resolution: {integrity: sha512-bUPWJgGhPdsoL3OR+I8nFF81P/+hwfqyMKaAWFxTg1zeRdEl61lVdrEfgNDBI7Px5Gr+uFGELlkCsDzy/7dAyw==}
     cpu: [x64]
     os: [win32]
 
-  '@typescript/native-preview@7.0.0-dev.20251211.1':
-    resolution: {integrity: sha512-RXuRj/zn2tWrria1eea1mzOVmUjNHdOZsxlcnXLy2BjXil+ncgdMFARWryeXP2+NPmGTwC+ERJ5YAuwU8n4nlg==}
+  '@typescript/native-preview@7.0.0-dev.20251212.1':
+    resolution: {integrity: sha512-uNPMu5+ElTN7AZRFJXsTPtSAQ2b7FIXMvpQbU/L0VD5PoBp5nMiQbgO1QFSvbFiIoTTma3I2TX3WSO5olIMTLQ==}
     hasBin: true
 
   '@vitest/coverage-v8@4.0.15':
@@ -1226,58 +1226,58 @@ packages:
     resolution: {integrity: sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==}
     engines: {'0': node >= 0.2.0}
 
-  lefthook-darwin-arm64@2.0.9:
-    resolution: {integrity: sha512-DRDqDiDWvQ8CAW7c5o90yApxBu5Pe958Ya2OmgTNLKOEw2tSIlz3YPc0AqWlXxp2KkB6RLv0ottLyJFFRmQBtQ==}
+  lefthook-darwin-arm64@2.0.11:
+    resolution: {integrity: sha512-RfpdcJJQXstdgDiIBDRffncayKiXx+0LyMUCunIxDEO2JMXPpYK2hIdpUU0rkitzptAADchG7u1OXJ31rrtIAA==}
     cpu: [arm64]
     os: [darwin]
 
-  lefthook-darwin-x64@2.0.9:
-    resolution: {integrity: sha512-Onx2QNWjeVbkDRIbfajcj0U73W51xbhalqRj7yT0JMIIzmyVafnEN2KRrd4i0/UnrquyY2mfrQlVjDM1DoMvCg==}
+  lefthook-darwin-x64@2.0.11:
+    resolution: {integrity: sha512-D013UNKQa4FKgpxDMqdaU109U2/Pidtrt9CobQoq8te4eGUglcwxMzuYVTgaYnenz0FgKxSfVaCZsZgwqeMWqA==}
     cpu: [x64]
     os: [darwin]
 
-  lefthook-freebsd-arm64@2.0.9:
-    resolution: {integrity: sha512-0Ew0kabZkl9uid7sz9DxeFjQSI0oBWwMA8eyeQf4z0FWQ1iMay+TSgV8WOSN0OAiS6QECmrl7J+5/S8z4t2XYQ==}
+  lefthook-freebsd-arm64@2.0.11:
+    resolution: {integrity: sha512-mgfNqG1tiJkCuGNwPG0LEfnAHGJA+Qzl6KidOtX/Zhxmj/sM+6hxiP4LOeEAhCnaZF5kuPtQgbFzShFHc2BK6A==}
     cpu: [arm64]
     os: [freebsd]
 
-  lefthook-freebsd-x64@2.0.9:
-    resolution: {integrity: sha512-bCqj0+bKzMenYkpJty7ZDGR8+RT/PxoYkt5QqIhxCj1b+DjFyOiMAbMiWr7vRm8tLiYK6ieVr5xsvjYPCXAsdA==}
+  lefthook-freebsd-x64@2.0.11:
+    resolution: {integrity: sha512-rnHOlQbJfLGCibr7yHM44kPNgf/tFpEbj/cWVHRhjRdbgYSCAjJk0uKd/EVo3v/vjfId2na0AhWbLvO/aY3wQQ==}
     cpu: [x64]
     os: [freebsd]
 
-  lefthook-linux-arm64@2.0.9:
-    resolution: {integrity: sha512-jSE+ZIxz++5JkU9vTY0ZCz7VijUvPw9rUXu/ufGq7HYHaxkQlgqGY9p9H9y10Oh1EahWiC3jGlForx5JhHDrCg==}
+  lefthook-linux-arm64@2.0.11:
+    resolution: {integrity: sha512-1XjDo2/4fM0TbJBwxZh8w+WMOFueg9oYHkryM8vc3vp8wTajdWBazg1K37JIS3FUco3tcOs+eWHQg0ekVjpWoA==}
     cpu: [arm64]
     os: [linux]
 
-  lefthook-linux-x64@2.0.9:
-    resolution: {integrity: sha512-Xwqew12w+9HiR0bBetTgaRuR9MdHnoe8gnluUSaH/wuGhC9ChEnxRu4ckahll4/Xl75TntlkOZOMDpnYU5YeEQ==}
+  lefthook-linux-x64@2.0.11:
+    resolution: {integrity: sha512-OKOcfEvozXhO7+y2xgUzvc2kkqfhluql/sjQSzd8Ka+iK3hM4KCfbfgYx9q61Pjr34a0+i03cuH5DF2dlq/rrg==}
     cpu: [x64]
     os: [linux]
 
-  lefthook-openbsd-arm64@2.0.9:
-    resolution: {integrity: sha512-5ErPjbzu2623TKPM1lOcsjzswYeEA1u1f8qPp1uvR8QgWDJlx4xdbOQErF5OsYSWhqAegxQITmrJgdPBvjWuFg==}
+  lefthook-openbsd-arm64@2.0.11:
+    resolution: {integrity: sha512-n1KEx196M3SKaWVNTQXGgxzBsiYAsdAy6Of6I6TAZwPhG7yoRrKGkQrhOlPgMzYl36udG1Lk4D+mfY9T0oOUYQ==}
     cpu: [arm64]
     os: [openbsd]
 
-  lefthook-openbsd-x64@2.0.9:
-    resolution: {integrity: sha512-DhFRJZamG3I+nTPTZV0N3N5VmB4FJSbT/oG4JYDqkvxtqwb3zAL6Q/868uVEgdZl9USxu2yRKI7RnKdllDvdzQ==}
+  lefthook-openbsd-x64@2.0.11:
+    resolution: {integrity: sha512-WAEtKpYUVvuJMVLA38IBoaPnTNSiaEzvUYxjTBlYTLHJwn7HC2GG6P1cnvoua8rfxb9/Bfi7C3D3IPa9VmB33Q==}
     cpu: [x64]
     os: [openbsd]
 
-  lefthook-windows-arm64@2.0.9:
-    resolution: {integrity: sha512-zp3mLv67+NBPuX9YrYk3CArkREoko1txAsEPyiB/NXGH3QgLHw9HbR+IeY1TslGlXvzQTBrJaiNcmsQWLFFvAQ==}
+  lefthook-windows-arm64@2.0.11:
+    resolution: {integrity: sha512-HBqW1qfAnmmbpet7gSWatB6H5YIFdGxCqzolMCLwY/0o8oPFiMwdNE5RGp5JMmhZdz/h3XlbaUlIhnxoW8dk5g==}
     cpu: [arm64]
     os: [win32]
 
-  lefthook-windows-x64@2.0.9:
-    resolution: {integrity: sha512-1TMNYvsW4D7MD66CRXkvcVTbNCq93wTH5IjTlSSn5CtJer9PFwBMWZfeFeEBU0c0gGAUq4NmkYN2pS8RZfISvA==}
+  lefthook-windows-x64@2.0.11:
+    resolution: {integrity: sha512-e5TYmV5cBZfRrhPVFCqjauegLI5CjdAd8exyAbMzGHkiwp3ZK145Su/pntgEP3d+ayS9mpgYPJmXYOSL7WHlyg==}
     cpu: [x64]
     os: [win32]
 
-  lefthook@2.0.9:
-    resolution: {integrity: sha512-SiHbJzS6QCp9UlYh4QZ2Bu+zSNEIFTASXz03hTNL5G6frZeXH56831DDqcPEy+729eA05po3n9ByJ0cAv4yQdw==}
+  lefthook@2.0.11:
+    resolution: {integrity: sha512-/91k4dt9MRNkzeSr1iMjNi/z8dNuh+XvNfXrWA6PV+M1ZxiNY6uN6bGnr13n+j7N89f4h7YWBhCqhzhK33M5cA==}
     hasBin: true
 
   lines-and-columns@1.2.4:
@@ -2272,36 +2272,36 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20251211.1':
+  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20251212.1':
     optional: true
 
-  '@typescript/native-preview-darwin-x64@7.0.0-dev.20251211.1':
+  '@typescript/native-preview-darwin-x64@7.0.0-dev.20251212.1':
     optional: true
 
-  '@typescript/native-preview-linux-arm64@7.0.0-dev.20251211.1':
+  '@typescript/native-preview-linux-arm64@7.0.0-dev.20251212.1':
     optional: true
 
-  '@typescript/native-preview-linux-arm@7.0.0-dev.20251211.1':
+  '@typescript/native-preview-linux-arm@7.0.0-dev.20251212.1':
     optional: true
 
-  '@typescript/native-preview-linux-x64@7.0.0-dev.20251211.1':
+  '@typescript/native-preview-linux-x64@7.0.0-dev.20251212.1':
     optional: true
 
-  '@typescript/native-preview-win32-arm64@7.0.0-dev.20251211.1':
+  '@typescript/native-preview-win32-arm64@7.0.0-dev.20251212.1':
     optional: true
 
-  '@typescript/native-preview-win32-x64@7.0.0-dev.20251211.1':
+  '@typescript/native-preview-win32-x64@7.0.0-dev.20251212.1':
     optional: true
 
-  '@typescript/native-preview@7.0.0-dev.20251211.1':
+  '@typescript/native-preview@7.0.0-dev.20251212.1':
     optionalDependencies:
-      '@typescript/native-preview-darwin-arm64': 7.0.0-dev.20251211.1
-      '@typescript/native-preview-darwin-x64': 7.0.0-dev.20251211.1
-      '@typescript/native-preview-linux-arm': 7.0.0-dev.20251211.1
-      '@typescript/native-preview-linux-arm64': 7.0.0-dev.20251211.1
-      '@typescript/native-preview-linux-x64': 7.0.0-dev.20251211.1
-      '@typescript/native-preview-win32-arm64': 7.0.0-dev.20251211.1
-      '@typescript/native-preview-win32-x64': 7.0.0-dev.20251211.1
+      '@typescript/native-preview-darwin-arm64': 7.0.0-dev.20251212.1
+      '@typescript/native-preview-darwin-x64': 7.0.0-dev.20251212.1
+      '@typescript/native-preview-linux-arm': 7.0.0-dev.20251212.1
+      '@typescript/native-preview-linux-arm64': 7.0.0-dev.20251212.1
+      '@typescript/native-preview-linux-x64': 7.0.0-dev.20251212.1
+      '@typescript/native-preview-win32-arm64': 7.0.0-dev.20251212.1
+      '@typescript/native-preview-win32-x64': 7.0.0-dev.20251212.1
 
   '@vitest/coverage-v8@4.0.15(vitest@4.0.15(@types/node@24.10.3)(jiti@2.6.1))':
     dependencies:
@@ -2655,48 +2655,48 @@ snapshots:
 
   jsonparse@1.3.1: {}
 
-  lefthook-darwin-arm64@2.0.9:
+  lefthook-darwin-arm64@2.0.11:
     optional: true
 
-  lefthook-darwin-x64@2.0.9:
+  lefthook-darwin-x64@2.0.11:
     optional: true
 
-  lefthook-freebsd-arm64@2.0.9:
+  lefthook-freebsd-arm64@2.0.11:
     optional: true
 
-  lefthook-freebsd-x64@2.0.9:
+  lefthook-freebsd-x64@2.0.11:
     optional: true
 
-  lefthook-linux-arm64@2.0.9:
+  lefthook-linux-arm64@2.0.11:
     optional: true
 
-  lefthook-linux-x64@2.0.9:
+  lefthook-linux-x64@2.0.11:
     optional: true
 
-  lefthook-openbsd-arm64@2.0.9:
+  lefthook-openbsd-arm64@2.0.11:
     optional: true
 
-  lefthook-openbsd-x64@2.0.9:
+  lefthook-openbsd-x64@2.0.11:
     optional: true
 
-  lefthook-windows-arm64@2.0.9:
+  lefthook-windows-arm64@2.0.11:
     optional: true
 
-  lefthook-windows-x64@2.0.9:
+  lefthook-windows-x64@2.0.11:
     optional: true
 
-  lefthook@2.0.9:
+  lefthook@2.0.11:
     optionalDependencies:
-      lefthook-darwin-arm64: 2.0.9
-      lefthook-darwin-x64: 2.0.9
-      lefthook-freebsd-arm64: 2.0.9
-      lefthook-freebsd-x64: 2.0.9
-      lefthook-linux-arm64: 2.0.9
-      lefthook-linux-x64: 2.0.9
-      lefthook-openbsd-arm64: 2.0.9
-      lefthook-openbsd-x64: 2.0.9
-      lefthook-windows-arm64: 2.0.9
-      lefthook-windows-x64: 2.0.9
+      lefthook-darwin-arm64: 2.0.11
+      lefthook-darwin-x64: 2.0.11
+      lefthook-freebsd-arm64: 2.0.11
+      lefthook-freebsd-x64: 2.0.11
+      lefthook-linux-arm64: 2.0.11
+      lefthook-linux-x64: 2.0.11
+      lefthook-openbsd-arm64: 2.0.11
+      lefthook-openbsd-x64: 2.0.11
+      lefthook-windows-arm64: 2.0.11
+      lefthook-windows-x64: 2.0.11
 
   lines-and-columns@1.2.4: {}
 
