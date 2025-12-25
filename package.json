@@ -55,7 +55,7 @@
     "@commitlint/config-conventional": "20.2.0",
     "@types/aws-lambda": "8.10.159",
     "@types/node": "24.10.4",
-    "@typescript/native-preview": "7.0.0-dev.20251217.1",
+    "@typescript/native-preview": "7.0.0-dev.20251218.3",
     "@vitest/coverage-v8": "4.0.16",
     "jest-extended": "7.0.0",
     "lefthook": "2.0.12",
@@ -64,7 +64,7 @@
     "typescript": "5.9.3",
     "unplugin-isolated-decl": "0.15.7",
     "vite": "7.3.0",
-    "vite-tsconfig-paths": "6.0.2",
+    "vite-tsconfig-paths": "6.0.3",
     "vitest": "4.0.16"
   }
 }
