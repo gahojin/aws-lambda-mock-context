@@ -31,7 +31,7 @@
     "check:packagejson": "attw --pack .",
     "test": "vitest --watch",
     "test:unit": "vitest --passWithNoTests --run --coverage",
-    "ncu": "npm-check-updates -u"
+    "ncu": "mise run ncu"
   },
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -57,7 +57,6 @@
     "@typescript/native-preview": "7.0.0-dev.20260218.1",
     "@vitest/coverage-v8": "4.0.18",
     "jest-extended": "7.0.0",
-    "npm-check-updates": "19.4.0",
     "rolldown": "1.0.0-rc.5",
     "typescript": "5.9.3",
     "unplugin-isolated-decl": "0.15.7",
