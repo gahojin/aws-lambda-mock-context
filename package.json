@@ -51,10 +51,10 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.18.2",
-    "@biomejs/biome": "2.4.4",
+    "@biomejs/biome": "2.4.5",
     "@types/aws-lambda": "8.10.161",
-    "@types/node": "24.10.15",
-    "@typescript/native-preview": "7.0.0-dev.20260227.1",
+    "@types/node": "24.11.0",
+    "@typescript/native-preview": "7.0.0-dev.20260302.1",
     "@vitest/coverage-v8": "4.0.18",
     "jest-extended": "7.0.0",
     "rolldown": "1.0.0-rc.6",
