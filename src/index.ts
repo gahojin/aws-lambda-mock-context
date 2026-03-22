@@ -149,5 +149,5 @@ const mockContext = <E = Record<string, any>>(options?: Options, overrides?: E):
   return Object.assign(context, overrides)
 }
 
-export { setGlobalOptions, resetGlobalOptions }
+export { resetGlobalOptions, setGlobalOptions }
 export default mockContext

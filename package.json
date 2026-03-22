@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.18.2",
-    "@biomejs/biome": "2.4.6",
+    "@biomejs/biome": "2.4.7",
     "@types/aws-lambda": "8.10.161",
     "@types/node": "24.12.0",
     "@typescript/native-preview": "7.0.0-dev.20260303.1",
