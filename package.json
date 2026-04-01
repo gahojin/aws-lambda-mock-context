@@ -54,7 +54,7 @@
     "@biomejs/biome": "2.4.8",
     "@types/aws-lambda": "8.10.161",
     "@types/node": "24.12.0",
-    "@typescript/native-preview": "7.0.0-dev.20260303.1",
+    "@typescript/native-preview": "7.0.0-dev.20260324.1",
     "@vitest/coverage-v8": "4.1.1",
     "jest-extended": "7.0.0",
     "rolldown": "1.0.0-rc.11",
@@ -63,5 +63,5 @@
     "vite-tsconfig-paths": "6.1.1",
     "vitest": "4.1.1"
   },
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@10.33.0"
 }
