@@ -51,13 +51,13 @@
     "@types/aws-lambda": "8.10.161",
     "@types/node": "24.12.2",
     "@typescript/native-preview": "7.0.0-dev.20260324.1",
-    "@vitest/coverage-v8": "4.1.4",
+    "@vitest/coverage-v8": "4.1.5",
     "jest-extended": "7.0.0",
     "rolldown": "1.0.0-rc.16",
     "rolldown-plugin-dts": "0.23.2",
     "vite": "8.0.9",
     "vite-tsconfig-paths": "6.1.1",
-    "vitest": "4.1.4"
+    "vitest": "4.1.5"
   },
   "packageManager": "pnpm@10.33.0"
 }
