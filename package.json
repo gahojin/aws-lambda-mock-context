@@ -24,10 +24,10 @@
   },
   "scripts": {
     "prepare": "biome migrate --write",
-    "build": "rolldown -c",
+    "build": "vite build",
     "prepublishOnly": "pnpm run build",
     "lint": "biome check --write .",
-    "check": "tsgo",
+    "check": "tsc",
     "check:packagejson": "attw --pack --profile esm-only .",
     "test": "vitest --watch",
     "test:unit": "vitest --passWithNoTests --run --coverage",
@@ -50,14 +50,12 @@
     "@biomejs/biome": "2.4.13",
     "@types/aws-lambda": "8.10.161",
     "@types/node": "24.12.2",
-    "@typescript/native-preview": "7.0.0-dev.20260324.1",
     "@vitest/coverage-v8": "4.1.5",
     "jest-extended": "7.0.0",
-    "rolldown": "1.0.0-rc.17",
-    "rolldown-plugin-dts": "0.23.2",
+    "typescript": "6.0.3",
     "vite": "8.0.10",
-    "vite-tsconfig-paths": "6.1.1",
+    "vite-plugin-dts": "5.0.0",
     "vitest": "4.1.5"
   },
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "pnpm@10.33.2"
 }
