@@ -1,4 +1,4 @@
-import context, { resetGlobalOptions, setGlobalOptions } from '.'
+import context, { resetGlobalOptions, setGlobalOptions } from './index.js'
 
 type InvokeAsyncOptions = {
   ms?: number

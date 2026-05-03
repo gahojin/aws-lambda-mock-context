@@ -1,17 +1,16 @@
-import dts from 'vite-plugin-dts'
+import dts from 'unplugin-dts/vite'
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   plugins: [
     dts({
-      exclude: ['src/**/*.test.ts'],
+      exclude: ['src/**/*.test.ts', 'src/**/*.bench.ts'],
     }),
   ],
   resolve: {
     tsconfigPaths: true,
   },
   build: {
-    ssr: true,
     lib: {
       entry: ['src/index.ts'],
       formats: ['es'],
@@ -23,8 +22,10 @@ export default defineConfig({
       output: {
         cleanDir: true,
         comments: false,
+        preserveModules: true,
       },
-      external: [],
+      platform: 'node',
+      external: [/^node:/],
       optimization: {
         inlineConst: { mode: 'all', pass: 5 },
       },
