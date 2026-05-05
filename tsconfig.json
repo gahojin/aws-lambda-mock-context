@@ -8,7 +8,7 @@
     "moduleResolution": "nodenext",
     "lib": [],
     "declaration": true,
-    "isolatedDeclarations": false,
+    "isolatedDeclarations": true,
     "sourceMap": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
