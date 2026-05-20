@@ -27,7 +27,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "newLine": "lf",
-    "types": ["@types/node", "vitest/globals", "jest-extended"]
+    "types": ["@types/node", "vitest/globals"]
   },
   "include": ["src/**/*"],
   "exclude": ["dist", "node_modules"]

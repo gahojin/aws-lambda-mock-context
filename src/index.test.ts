@@ -88,11 +88,13 @@ describe('mockContext', () => {
 
     const ms = ctx.getRemainingTimeInMillis()
 
-    expect(ctx.getRemainingTimeInMillis()).toBeWithin(1950, 2050)
+    const millis = ctx.getRemainingTimeInMillis()
+    expect(millis).toBeGreaterThanOrEqual(1950)
+    expect(millis).toBeLessThan(2050)
 
     await delay(10)
 
-    expect(ctx.getRemainingTimeInMillis() < ms).toBeTrue()
+    expect(ctx.getRemainingTimeInMillis() < ms).toBe(true)
 
     ctx.succeed(undefined)
 
@@ -110,7 +112,9 @@ describe('mockContext', () => {
 
     await delay(1000)
 
-    expect(ctx.getRemainingTimeInMillis()).toBeWithin(8950, 9050)
+    const millis = ctx.getRemainingTimeInMillis()
+    expect(millis).toBeGreaterThanOrEqual(8950)
+    expect(millis).toBeLessThan(9050)
 
     ctx.succeed('result')
   })
@@ -147,7 +151,9 @@ describe('mockContext', () => {
 
     await delay(1000)
 
-    expect(ctx.getRemainingTimeInMillis()).toBeWithin(8950, 9050)
+    const millis = ctx.getRemainingTimeInMillis()
+    expect(millis).toBeGreaterThanOrEqual(8950)
+    expect(millis).toBeLessThan(9050)
 
     await expect(invokeAsync('succeed', 'foo', { ms: 2000, timeout: 1 })).rejects.toThrow('Task timed out after 1.00 seconds')
 
