@@ -28,7 +28,6 @@
     "prepublishOnly": "pnpm run build",
     "lint": "biome check --write .",
     "check": "tsc",
-    "check:packagejson": "attw --pack --profile esm-only .",
     "test": "vitest --watch",
     "test:unit": "vitest --passWithNoTests --run --coverage",
     "ncu": "mise run ncu"
@@ -46,7 +45,6 @@
     }
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "0.18.2",
     "@biomejs/biome": "2.4.15",
     "@types/aws-lambda": "8.10.161",
     "@types/node": "24.12.4",
