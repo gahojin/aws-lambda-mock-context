@@ -1,6 +1,16 @@
 # 重複排除
 dedupePeers: true
 
+catalog:
+  typescript: 6.0.3
+  unplugin-dts: 1.0.3
+  vite: 8.1.0
+  vitest: 4.1.9
+  '@biomejs/biome': 2.5.1
+  '@types/aws-lambda': 8.10.162
+  '@types/node': 25.9.4
+  '@vitest/coverage-v8': 4.1.9
+
 # リリースから一定時間経過していないか、信頼性低下したパッケージはインストールしない
 minimumReleaseAge: 2880 # 2d
 minimumReleaseAgeIgnoreMissingTime: false
