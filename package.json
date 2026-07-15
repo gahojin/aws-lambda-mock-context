@@ -24,7 +24,7 @@
   },
   "scripts": {
     "prepare": "biome migrate --write",
-    "build": "vite build",
+    "build": "rolldown -c",
     "prepublishOnly": "pnpm run build",
     "lint": "biome check --write .",
     "check": "tsc",
@@ -45,14 +45,14 @@
     }
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.1",
-    "@types/aws-lambda": "8.10.162",
-    "@types/node": "25.9.4",
-    "@vitest/coverage-v8": "4.1.9",
-    "typescript": "6.0.3",
-    "unplugin-dts": "1.0.3",
-    "vite": "8.1.0",
-    "vitest": "4.1.9"
+    "@biomejs/biome": "catalog:",
+    "@types/aws-lambda": "catalog:",
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "rolldown": "catalog:",
+    "rolldown-plugin-dts": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   },
-  "packageManager": "pnpm@11.1.1"
+  "packageManager": "pnpm@11.10.0"
 }

@@ -1,6 +1,16 @@
 # 重複排除
 dedupePeers: true
 
+catalog:
+  rolldown: 1.1.5
+  rolldown-plugin-dts: 0.27.8
+  typescript: 7.0.2
+  vitest: 4.1.9
+  '@biomejs/biome': 2.5.1
+  '@types/aws-lambda': 8.10.162
+  '@types/node': 25.9.4
+  '@vitest/coverage-v8': 4.1.9
+
 # リリースから一定時間経過していないか、信頼性低下したパッケージはインストールしない
 minimumReleaseAge: 2880 # 2d
 minimumReleaseAgeIgnoreMissingTime: false
