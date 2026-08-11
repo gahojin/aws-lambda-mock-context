@@ -30,7 +30,7 @@ export default defineConfig({
   output: [{ dir: 'dist', format: 'es', sourcemap: true, cleanDir: true, comments: { annotation: true, jsdoc: false, legal: true } }],
   plugins: [
     dts({
-      oxc: true,
+      generator: 'oxc',
     }),
   ],
 })
