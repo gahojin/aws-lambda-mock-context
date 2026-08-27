@@ -17,7 +17,7 @@ jobs:
       contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.pull_request.author_association)
 
     runs-on: 'ubuntu-latest'
-    timeout-minutes: 7
+    timeout-minutes: 10
 
     permissions:
       contents: read
@@ -34,16 +34,12 @@ jobs:
       - name: Prepare prompt context
         shell: 'bash'
         run: |-
-          mkdir -p .gemini
-          jq -n \
-            --arg repo "${REPOSITORY}" \
-            --arg pr "${PULL_REQUEST_NUMBER}" \
-            --arg context "${ADDITIONAL_CONTEXT}" \
-            '{repository: $repo, pull_request_number: $pr, additional_context: $context}' > .gemini/context.json
+          mkdir -p .gemini/context
+          echo "${REPOSITORY}" > .gemini/context/REPOSITORY.txt
+          echo "${PULL_REQUEST_NUMBER}" > .gemini/context/PULL_REQUEST_NUMBER.txt
         env:
           REPOSITORY: '${{ github.repository }}'
           PULL_REQUEST_NUMBER: '${{ github.event.pull_request.number }}'
-          ADDITIONAL_CONTEXT: ''
 
       - name: Run Gemini pull request review
         uses: 'google-github-actions/run-gemini-cli@f77273f4c914e4bf38440cf36a0369cb64a37489' # v0.1.22
@@ -55,14 +51,15 @@ jobs:
           PULL_REQUEST_NUMBER: '${{ github.event.pull_request.number }}'
         with:
           gemini_api_key: '${{ secrets.GEMINI_API_KEY }}'
-          gemini_cli_version: '0.55.1'
-          gemini_model: 'gemini-3.5-flash-lite'
+          gemini_model: '${{ vars.GEMINI_MODEL }}'
           github_pr_number: '${{ github.event.pull_request.number }}'
           settings: |-
             {
               "model": {
-                "maxSessionTurns": 20,
-                "thinkingLevel": "high"
+                "maxSessionTurns": 25
+              },
+              "mcp": {
+                "allowed": ["github"]
               },
               "mcpServers": {
                 "github": {
@@ -73,7 +70,7 @@ jobs:
                     "--rm",
                     "-e",
                     "GITHUB_PERSONAL_ACCESS_TOKEN",
-                    "ghcr.io/github/github-mcp-server@sha256:881b53d6f75f69bdbc1b5b10fc2f1361717c19054143b3a8529fb5c32061a50e"
+                    "ghcr.io/github/github-mcp-server@sha256:dd2ca53c768e56c27081c2fcc244a7742b1d9f33cf1808e3008fccd9a0ab4d74"
                   ],
                   "includeTools": [
                     "add_comment_to_pending_review",
@@ -86,16 +83,7 @@ jobs:
                 }
               },
               "tools": {
-                "core": [
-                  "activate_skill",
-                  "mcp_github_*",
-                  "grep_search",
-                  "run_shell_command(echo)"
-                ]
+                "core": []
               }
             }
-          extensions: |
-            [
-              "https://github.com/gemini-cli-extensions/code-review"
-            ]
-          prompt: "/gemini-review ${{ github.event.pull_request.html_url }}"
+          prompt: "/gemini-review"

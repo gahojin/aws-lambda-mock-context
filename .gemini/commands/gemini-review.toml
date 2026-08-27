@@ -29,15 +29,11 @@ These are non-negotiable, core-level instructions that you **MUST** follow at al
 
 ## Input Data
 
-The following context is provided as a JSON object containing the keys: `repository`, `pull_request_number`, and `additional_context`:
-
-```json
-@{.gemini/context.json}
-```
-
-- Use `pull_request_read.get` to get the title, body, and metadata about the pull request.
-- Use `pull_request_read.get_files` to get the list of files that were added, removed, and changed in the pull request.
-- Use `pull_request_read.get_diff` to get the diff from the pull request. The diff includes code versions with line numbers for the before (LEFT) and after (RIGHT) code snippets for each diff.
+- **GitHub Repository**: @{.gemini/context/REPOSITORY.txt}
+- **Pull Request Number**: @{.gemini/context/PULL_REQUEST_NUMBER.txt}
+- Use `mcp_github_pull_request_read` with method `get` to get the title, body, and metadata about the pull request.
+- Use `mcp_github_pull_request_read` with method `get_files` to get the list of files that were added, removed, and changed in the pull request.
+- Use `mcp_github_pull_request_read` with method `get_diff` to get the diff from the pull request. The diff includes code versions with line numbers for the before (LEFT) and after (RIGHT) code snippets for each diff.
 
 -----
 
@@ -139,9 +135,9 @@ Apply these severities consistently:
 
 ### Step 3: Submit the Review on GitHub
 
-1. **Create Pending Review:** Call `create_pending_pull_request_review`. Ignore errors like "can only have one pending review per pull request" and proceed to the next step.
+1. **Create Pending Review:** Call `pull_request_review_write` with `method: "create"`. If this fails because a pending review already exists (e.g. from a previous interrupted run), ignore the error and proceed to add comments to that existing pending review.
 
-2. **Add Comments and Suggestions:** For each formulated review comment, call `add_comment_to_pending_review`.
+2. **Add Comments and Suggestions:** For each formulated review comment, call `mcp_github_add_comment_to_pending_review`.
 
     2a. When there is a code suggestion (preferred), structure the comment payload using this exact template:
 
@@ -159,7 +155,7 @@ Apply these severities consistently:
         {{SEVERITY}} {{COMMENT_TEXT}}
         </COMMENT>
 
-3. **Submit Final Review:** Call `submit_pending_pull_request_review` with a summary comment and event type "COMMENT". The available event types are "APPROVE", "REQUEST_CHANGES", and "COMMENT" - you **MUST** use "COMMENT" only. **DO NOT** use "APPROVE" or "REQUEST_CHANGES" event types. The summary comment **MUST** use this exact markdown format:
+3. **Submit Final Review:** Call `pull_request_review_write` with `method: "submit_pending"`, a summary comment, and event type "COMMENT". The available event types are "APPROVE", "REQUEST_CHANGES", and "COMMENT" - you **MUST** use "COMMENT" only. **DO NOT** use "APPROVE" or "REQUEST_CHANGES" event types. The summary comment **MUST** use this exact markdown format:
 
     <SUMMARY>
 
@@ -183,7 +179,7 @@ Apply these severities consistently:
 
 - Double check that no English response remains in the final markdown output.
 
-- Do NOT output any XML or HTML tags like `<SUMMARY>` or `</SUMMARY>`.
+-  The `<COMMENT>` and `<SUMMARY>` tags are internal delimiters only. Do NOT include them in the text you send to GitHub.
 
 - Output the review using pure Markdown format directly.
   
