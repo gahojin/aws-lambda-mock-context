@@ -84,7 +84,16 @@ jobs:
                 }
               },
               "tools": {
-                "core": []
+                "core": [
+                  "activate_skill",
+                  "mcp_github_*",
+                  "run_shell_command(echo)",
+                  "run_shell_command(cat)"
+                ]
               }
             }
-          prompt: "/gemini-code-review"
+          extensions: |
+            [
+              "https://github.com/gemini-cli-extensions/code-review"
+            ]
+          prompt: "/pr-code-review"
