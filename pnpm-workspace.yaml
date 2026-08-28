@@ -9,7 +9,7 @@ catalog:
   rolldown-plugin-dts: 0.28.2
   typescript: 7.0.2
   vitest: 4.1.11
-  '@biomejs/biome': 2.5.9
+  '@biomejs/biome': 2.5.10
   '@types/aws-lambda': 8.10.162
   '@types/node': 26.2.0
   '@vitest/coverage-v8': 4.1.11
