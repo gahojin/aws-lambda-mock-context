@@ -5,13 +5,13 @@ packages:
 dedupePeers: true
 
 catalog:
-  rolldown: 1.2.7
+  rolldown: 1.2.8
   rolldown-plugin-dts: 0.28.5
   typescript: 7.0.2
   vitest: 5.0.0
-  '@biomejs/biome': 2.5.12
+  '@biomejs/biome': 2.5.13
   '@types/aws-lambda': 8.10.163
-  '@types/node': 26.4.1
+  '@types/node': 26.5.1
   '@vitest/coverage-v8': 5.0.0
 
 overrides:
