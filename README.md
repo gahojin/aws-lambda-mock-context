@@ -16,7 +16,7 @@ $ npm install --save-dev @gahojin-inc/aws-lambda-mock-context
 ```typescript
 import mockContext from '@gahojin-inc/aws-lambda-mock-context'
 
-await index.handler({hello: 'world'}, mockContext())
+await index.handler({ hello: 'world' }, mockContext())
 ```
 
 ## License
