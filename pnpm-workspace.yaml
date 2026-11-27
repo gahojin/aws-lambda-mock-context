@@ -5,14 +5,14 @@ packages:
 dedupePeers: true
 
 catalog:
-  rolldown: 1.3.2
+  rolldown: 1.3.3
   rolldown-plugin-dts: 0.30.2
   typescript: 7.0.2
-  vitest: 5.1.0
-  "@biomejs/biome": 2.6.7
+  vitest: 5.1.1
+  "@biomejs/biome": 2.6.8
   "@types/aws-lambda": 8.10.164
   "@types/node": 26.6.6
-  "@vitest/coverage-v8": 5.1.0
+  "@vitest/coverage-v8": 5.1.1
 
 overrides:
   # CVE-2026-67213
